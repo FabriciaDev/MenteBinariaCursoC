@@ -57,6 +57,8 @@ unsigned int contador = 0;
 
 ---
 
-# float e double — detalhe importante
+### float e double — detalhe importante
 
 Um número com casas decimais escrito diretamente no código é **double por padrão**.
+
+
