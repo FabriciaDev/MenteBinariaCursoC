@@ -61,4 +61,3 @@ unsigned int contador = 0;
 
 Um número com casas decimais escrito diretamente no código é **double por padrão**.
 
-
