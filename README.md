@@ -18,7 +18,7 @@
   - Linux 64 bits → 8 bytes  
   - Windows 64 bits → 4 bytes  
 
-# Signed e Unsigned — duas versões de cada tipo inteiro
+## Signed e Unsigned — duas versões de cada tipo inteiro
 
 | Tipo   | Intervalo signed                  | Intervalo unsigned              |
 |--------|-----------------------------------|---------------------------------|
@@ -41,3 +41,22 @@ Por ora, prefira sempre `signed`.
 ### Exemplo em C:
 ```c
 unsigned int contador = 0;
+```
+
+## float e double — quando usar cada um
+
+| Tipo   | Tamanho | Precisão                  | Exemplos         | Especificador | Quando usar                                                                 |
+|--------|---------|---------------------------|------------------|---------------|------------------------------------------------------------------------------|
+| float  | 4 bytes | ~7 dígitos decimais       | 3.14f, -0.5f     | %f ou %.2f    | Sensores, gráficos, quando memória importa                                   |
+| double | 8 bytes | ~15 dígitos decimais      | 3.14159, 2.0     | %f ou %.2f    | Cálculos científicos, financeiros — quase sempre                             |
+
+**Regras práticas:**
+- `float`: use o sufixo **f** (ex: `3.14f`).  
+- `double`: é o padrão em C, sem sufixo (`3.14` já é double).  
+- Quando em dúvida, use **double**. Só use `float` se houver razão específica.  
+
+---
+
+# float e double — detalhe importante
+
+Um número com casas decimais escrito diretamente no código é **double por padrão**.
