@@ -61,3 +61,15 @@ unsigned int contador = 0;
 
 Um número com casas decimais escrito diretamente no código é **double por padrão**.
 
+# O operador & — "o endereço de"
+
+| Situação | Código                          | Explicação                                                                 |
+|----------|---------------------------------|-----------------------------------------------------------------------------|
+| Erro     | scanf("%d", idade);             | **ERRADO** — comportamento indefinido. O `scanf` tenta usar o valor de `idade` como endereço. |
+| Correto  | scanf("%d", &idade);            | **CERTO** — o `&` fornece o endereço da variável, permitindo ao `scanf` guardar o valor nela. |
+| printf   | printf("%d", idade);            | "Me dá o **valor** que está na gaveta `idade`."                             |
+| scanf    | scanf("%d", &idade);            | "Me dá o **endereço** da gaveta `idade`, para eu guardar algo lá."          |
+
+**Resumo:**
+- O `&` não lê o valor — ele informa **onde guardar** o novo valor.  
+- Sem o `&`, o `scanf` usa o conteúdo da variável como se fosse um endereço → resultado: programa trava ou grava em lugar errado.
