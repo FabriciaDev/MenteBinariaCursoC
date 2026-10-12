@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+
+	/* Declare uma variável de cada tipo char c, int i, double d - 
+	inicialize com qualquer valor*/
+
+	char c = 'A';
+	int i = 43;
+	double d = 45.45;
+
+
+	/* Imprema o endereço de casa uma com %p e anote os resultados*/
+
+	printf(" o Endereço de c é %p,\n o endereço de i é %p e\n o endereço de d é %p\n",	&c, &i, &d);
+	scanf("%p", )
+
+	/* Calcule a diferença entre os endereços c e i, e entre i e d */
+
+	printf("A diferença entre os endereços %p e %p é %x,\n", &c, &i, &c - &i );
+
+	return 0;
+}

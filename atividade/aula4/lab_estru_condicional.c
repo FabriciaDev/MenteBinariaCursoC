@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main(void) {
+
+	/*Leia três numeros inteiros e
+	imprima o maior e o menor usando if-else*/
+
+	int a, b, c;
+	printf("Digite três númerios inteiros: ");
+	scanf("%d %d %d", &a, &b, &c);
+
+	int maior = a;
+	if (b > a) {
+		maior = b;
+	}  if (c  >  a ) {
+		maior = c;
+	}
+
+	int menor = a;
+	if (b < a) {
+		menor = b;
+	} if (c < a) {
+		menor = c;
+	}
+
+	printf("Maior: %d\n", maior);
+	printf("Menor: %d\n", menor);
+
+	/* Leia o peso a altura . Calcule o IMC[peso/(altura*altura) e
+	depois classifique como abaixo do peso (<18.5), normal(<25.0), 
+	sobrepeso(<30.0, obeso(>=30)*/
+
+	float  peso, altura, imc;
+	printf("Digite seu peso em kilos: \n");
+	scanf("%f", &peso);
+	printf("Digite sua altura em centimetros\n");
+        scanf("%f", &altura);
+	imc = peso/(altura * altura); 
+
+	if (imc < 18.5) {
+                printf("Você está abaixo do peso!\n");
+        } if (imc  < 25.0) {
+                printf("Seu peso está normal...");
+        } if (imc < 30.0) {
+		printf("Lamento...Você tem  sobrepeso!");
+	} if (imc > 30.00) {
+		printf("Você está OBESO! O-B-E-S-O!");
+	}
+
+
+
+
+
+
+
+
+	return 0;
+}
